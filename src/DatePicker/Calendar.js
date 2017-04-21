@@ -54,13 +54,21 @@ class Calendar extends Component {
     muiTheme: PropTypes.object.isRequired,
   };
 
-  state = {
-    displayDate: undefined,
-    displayMonthDay: true,
-    selectedDate: undefined,
-    transitionDirection: 'left',
-    transitionEnter: true,
-  };
+  constructor(props) {
+    super();
+
+    const displayMonthDay = props.displayMonthDay != null
+      ? props.displayMonthDay
+      : true;
+
+    this.state = {
+      displayDate: undefined,
+      displayMonthDay,
+      selectedDate: undefined,
+      transitionDirection: 'left',
+      transitionEnter: true,
+    };
+  }
 
   componentWillMount() {
     this.setState({

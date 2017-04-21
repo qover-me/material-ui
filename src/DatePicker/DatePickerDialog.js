@@ -110,6 +110,7 @@ class DatePickerDialog extends Component {
       container,
       containerStyle,
       disableYearSelection,
+      displayMonthDay,
       initialDate,
       firstDayOfWeek,
       locale,
@@ -165,6 +166,7 @@ class DatePickerDialog extends Component {
             DateTimeFormat={DateTimeFormat}
             cancelLabel={cancelLabel}
             disableYearSelection={disableYearSelection}
+            displayMonthDay={displayMonthDay}
             firstDayOfWeek={firstDayOfWeek}
             initialDate={initialDate}
             locale={locale}

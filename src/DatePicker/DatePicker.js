@@ -201,6 +201,10 @@ class DatePicker extends Component {
       this.setState({
         dialogDate: this.getDate(),
       }, this.refs.dialogWindow.show);
+    } else if (this.props.initialDate) {
+      this.setState({
+        dialogDate: this.props.initialDate,
+      }, this.refs.dialogWindow.show);
     } else {
       this.setState({
         dialogDate: new Date(),
@@ -278,6 +282,7 @@ class DatePicker extends Component {
       defaultDate, // eslint-disable-line no-unused-vars
       dialogContainerStyle,
       disableYearSelection,
+      displayMonthDay,
       firstDayOfWeek,
       formatDate: formatDateProp,
       locale,
@@ -317,6 +322,7 @@ class DatePicker extends Component {
           container={container}
           containerStyle={dialogContainerStyle}
           disableYearSelection={disableYearSelection}
+          displayMonthDay={displayMonthDay}
           firstDayOfWeek={firstDayOfWeek}
           initialDate={this.state.dialogDate}
           locale={locale}
