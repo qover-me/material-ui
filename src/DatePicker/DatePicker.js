@@ -285,6 +285,7 @@ class DatePicker extends Component {
       displayMonthDay,
       firstDayOfWeek,
       formatDate: formatDateProp,
+      initialDate,
       locale,
       maxDate,
       minDate,
